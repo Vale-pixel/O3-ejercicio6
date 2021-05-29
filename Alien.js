@@ -2,7 +2,7 @@ class Alien {
 constructor (x, y){
     this.x = x;
     this.y = y;
-    this.dead = true;
+    this.dead = false;
     //122,270
 }
 
@@ -30,12 +30,12 @@ body(){
 
     
 }
-cabum(x, y){
-    if(x > this.x && x <(this.x + 46) &&
-    y > this.y && y < this.y + 30){
-        
-        this.dead = false;
+verifyCaboom(x, y){ // además de marcarlo como muerto... retorna el valor para usarlo
+    if(x > this.x && x <(this.x + 46) && y > this.y && y < this.y + 30){        
+        this.dead = true; // muere cuando lo tocan no?
+        return true;
     }
+    return false;
   
 }
 isDead(){

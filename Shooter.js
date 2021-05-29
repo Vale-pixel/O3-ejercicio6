@@ -33,6 +33,10 @@ class Shooter{
             this.bullet.push(new Bomb(this.x,this.y));
         
     }
+
+    getBullets(){
+        return this.bullet;
+    }
    
     removeInactiveBombs(){
         for(let i = 0; i < this.bullet.lenght ; i ++){
